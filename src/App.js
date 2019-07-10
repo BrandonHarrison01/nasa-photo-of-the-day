@@ -3,24 +3,28 @@ import axios from 'axios';
 import "./App.css";
 
 import NasaImage from './components/NasaImage';
+import Title from './components/Title';
+import Description from './components/Description';
 
 function App() {
 
-  const [nasaData, setNasaData] = useState();
+  const [nasaData, setNasaData] = useState([]);
 
   useEffect(() => {
     axios
-      .get('https://dog.ceo/api/breeds/image/random')
-      // .then(res => console.log(res))
-      .then(res => setNasaData(res.data.message))
+      .get('https://api.nasa.gov/planetary/apod?api_key=e23odHRz4buvCf4SphnZhnI7fkaojwyVaC19TKYF')
+      .then(res => setNasaData(res.data))
       .catch(err => console.log(err))
   }, []);
 
   console.log('THIS IS NASA DATA', nasaData)
+
   return (
     <div className="App">
       <h1>Nasa Photo of the Day!</h1>
-      <NasaImage nasaData={nasaData} />
+      <Title nasaData={nasaData} />
+      <NasaImage url={nasaData.url} />
+      <Description description={nasaData.explanation} />
     </div>
   );
 }
