@@ -1,9 +1,9 @@
 import React from 'react';
 
-function NasaImage() {
+function NasaImage (props) {
     return(
         <div>
-            image goes here
+            <img src={props.nasaData} alt='nasa of the day' />
         </div>
     )
 }
