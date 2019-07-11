@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <h1>Nasa Photo of the Day!</h1>
       <Title nasaData={nasaData} />
-      <NasaImage url={nasaData.url} />
+      <NasaImage nasaData={nasaData} />
       <Description description={nasaData.explanation} />
     </div>
   );
