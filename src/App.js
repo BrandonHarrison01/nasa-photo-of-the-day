@@ -11,7 +11,15 @@ function App() {
   const Card = styled.div`
     border: 2px solid black;
     background-color: #444;
+    width: 80%;
+    margin: 0 auto 100px;
   `;
+
+  const Heading = styled.h1`
+    text-align: center;
+    color: #bbb;
+    margin: 60px 0 40px;
+  `
 
   const [nasaData, setNasaData] = useState();
 
@@ -22,10 +30,10 @@ function App() {
       .catch(err => console.log(err))
   }, []);
 
-  if(!nasaData) return <h2>loading...</h2>
+  if(!nasaData) return <h3>loading...</h3>
   return (
     <div className="App">
-      <h1>Nasa Photo of the Day!</h1>
+      <Heading>Nasa Photo of the Day!</Heading>
       <Card>
         <Title nasaData={nasaData} />
         <NasaImage nasaData={nasaData} />
