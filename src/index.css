@@ -17,6 +17,10 @@ img {
   width: 100%;
 }
 
+.imageContainer {
+  text-align: center;
+}
+
 h3 {
   color: rgb(27, 27, 27);
 }
