@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgb(40, 4, 70), rgb(0, 0, 0) 25%, rgb(25, 8, 71) 90% );
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+img {
+  width: 100%;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+h3 {
+  color: rgb(27, 27, 27);
+}
+
+p {
+  margin: 20px;
 }
